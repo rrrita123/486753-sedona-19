@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Маргарита](https://up.htmlacademy.ru/adaptive/19/user/486753).
-* Наставник: `Неизвестно`.
+* Наставник: [Амина Омарова](https://htmlacademy.ru/profile/id474063).
 
 ---
 
