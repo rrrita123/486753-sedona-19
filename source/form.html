@@ -13,7 +13,8 @@
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
-        <li class="main-nav__item button-close"><a href="index.html">Главная</a></li>
+        <li class="main-nav__item button-close">x</li>
+        <li class="main-nav__item"><a href="index.html">Главная</a></li>
         <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
         <li class="main-nav__item main-nav__item--active"><a>Форма отзыва</a></li>
         <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a></li>
@@ -22,22 +23,22 @@
   </header>
 
   <main class="page-main">
+    <h1 class="visually-hidden">Форма отправки отзыва</h1>
 
-    <section class="write-reviews">
-      <header class="write-reviews__header">
-        <img class="write-reviews__image" width="230" height="40" src="https://via.placeholder.com/230x40" alt="Логотип Седоны">
-      </header>
-      <div class="write-reviews__info">
-        <h2 class="write-reviewse__title">Оставьте свой отзыв</h2>
-        <p class="write-reviews__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      </div>
+    <div class="banner">
+      <h2 class="visually-hidden">Банер Седоны</h2>
+      <img class="banner__image" width="230" height="40" src="https://via.placeholder.com/230x40" alt="Добро пожаловать в Седону">
+    </div>
+
+    <section class="info info--white">
+      <h2 class="visually-hidden">Информация о фото и видео</h2>
+      <b class="info__title">Оставьте свой отзыв</b>
+      <p class="info__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </section>
 
     <section class="form">
       <h2 class="visually-hidden">Форма отзыва</h2>
-
     </section>
-
   </main>
 
   <footer class="page-footer">
