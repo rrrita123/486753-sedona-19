@@ -12,7 +12,8 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active button-close"><a>Главная</a></li>
+          <li class="main-nav__item button-close">x</li>
+          <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
           <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
           <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
           <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a></li>
@@ -23,26 +24,27 @@
     <main class="page-main">
       <h1 class="visually-hidden">Седона - городок в Аризоне</h1>
 
-      <section class="city-​​description">
-        <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
-        <header class="city-​​description__header">
-          <img class="city-​​description__image" width="281" height="214" src="https://via.placeholder.com/281x214" alt="Добро пожаловать в Седону">
-        </header>
-        <div class="city-​​description__info">
-          <b class="city-​​description__title">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</b>
-          <p class="city-​​description__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-        </div>
+      <div class="banner">
+        <h2 class="visually-hidden">Банер Седоны</h2>
+        <img class="banner__image" width="281" height="214" src="https://via.placeholder.com/281x214" alt="Добро пожаловать в Седону">
+      </div>
+
+      <section class="info info--white">
+        <h2 class="visually-hidden">Информация о Седоне</h2>
+        <b class="info__title">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</b>
+        <p class="info__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
 
-      <section class="advantage">
+      <section class="info info--blue">
         <h2 class="visually-hidden">Преимущество 1</h2>
-        <div class="advantage__text advantage__text--first">
-          <p class="advantage__title advantage__title--first">Настоящий городок</p>
-          <p class="advantage__number advantage__number--first">— №1 —</p>
-          <p class="advantage__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
-          <img class="advantage__image advantage__image--first" width="320" height="260" src="https://via.placeholder.com/320x260" alt="Городок Седона">
-        </div>
+        <p class="info__title">Настоящий городок</p>
+        <p class="info__number">— №1 —</p>
+        <p class="info__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
       </section>
+
+      <div class="photo-city">
+        <img class="photo-city__image" width="320" height="260" src="https://via.placeholder.com/320x260" alt="Городок Седона">
+      </div>
 
       <section class="recommendations">
         <h2 class="visually-hidden">Рекомендации по Седоне</h2>
@@ -62,37 +64,52 @@
           </ul>
       </section>
 
-      <section class="advantage">
+      <section class="info info--blue">
         <h2 class="visually-hidden">Преимущество 2</h2>
-        <div class="advantage__text advantage__text--bridge">
-          <p class="advantage__title advantage__title--bridge">Там есть мост дьявола</p>
-          <p class="advantage__number advantage__number--bridge">— №2 —</p>
-          <p class="advantage__description advantage__description--bridge">Да, по нему можно пройти! если вы осмелитесь, конечно</p>
-          <img class="advantage__image advantage__image--bridge" width="320" height="260" src="https://via.placeholder.com/320x260" alt="Мост дьявола">
-        </div>
+        <p class="info__title">Там есть мост дьявола</p>
+        <p class="info__number">— №2 —</p>
+        <p class="info__text">Да, по нему можно пройти! если вы осмелитесь, конечно</p>
       </section>
+
+      <div class="photo-bridge">
+        <img class="photo-bridge__image" width="320" height="260" src="https://via.placeholder.com/320x260" alt="Мост дьявола">
+      </div>
 
       <section class="advantage-other">
         <h2 class="visually-hidden">Другие преимущества</h2>
-        <ul class="advantage-other__list">
-          <li class="advantage-other__item">
-            <p class="advantage-other__title">Небольшая площадь</p>
-            <p class="advantage-other__num">— №3 —</p>
-            <p class="advantage-other__description">Все интересные места находятся очень близко</p>
-          </li>
-          <li class="advantage-other__item">
-            <p class="advantage-other__title">Красивая дорога</p>
-            <p class="advantage-other__num">— №4 —</p>
-            <p class="advantage-other__description">Ехать в седону из лас-вегаса совсем не скучно!</p>
-          </li>
-          <li class="advantage-other__item">
-            <p class="advantage-other__title">Мало туристов</p>
-            <p class="advantage-other__num">— №5 —</p>
-            <p class="advantage-other__description">Большинство едет в гранд каньон и толпится там</p>
-          </li>
-        </ul>
+        <div class="info info--grey">
+          <p class="info__title">Небольшая площадь</p>
+          <p class="info__num">— №3 —</p>
+          <p class="info__text">Все интересные места находятся очень близко</p>
+        </div>
+        <div class="info info--grey">
+          <p class="info__title">Красивая дорога</p>
+          <p class="info__num">— №4 —</p>
+          <p class="info__text">Ехать в седону из лас-вегаса совсем не скучно!</p>
+        </div>
+        <div class="info info--grey">
+          <p class="info__title">Мало туристов</p>
+          <p class="info__num">— №5 —</p>
+          <p class="info__text">Большинство едет в гранд каньон и толпится там</p>
+        </div>
+      </section>
+
+      <!-- Задание №2 пока не проверять -->
+      <section class="hotel-search">
+        <h2 class="visually-hidden">Поиск гостиницы</h2>
+        <div class="info info--white">
+          <p class="info__title">Заинтересовались?</p>
+          <p class="info__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        </div>
+        <a class="hotel-search__item button-search" href="#">Найти гостиницу</a>
+      </section>
+
+      <section class="map">
+        <h2 class="visually-hidden">Седона на карте</h2>
+        <img class="map__address" width="320" height="350" src="https://via.placeholder.com/320x350" alt="США, штат Аризона, город Седона">
       </section>
     </main>
+    <!--  -->
 
     <footer class="page-footer">
       <p class="page-footer__contact">#visitsedona</p>
@@ -114,6 +131,5 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
-
   </body>
 </html>
