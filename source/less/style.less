@@ -1,0 +1,82 @@
+@import "page-header.less";
+@import "main-nav.less";
+@import "page-main.less";
+@import "banner.less";
+@import "info-start.less";
+@import "info.less";
+@import "photo-block.less";
+@import "recommendations.less";
+@import "advantage-other.less";
+@import "page-footer.less";
+@import "social.less";
+@import "copyright.less";
+@import "hotel-search.less";
+@import "map.less";
+@import "info-inner.less";
+@import "gallery-foto.less";
+@import "foto.less";
+@import "gallery-video.less";
+@import "player.less";
+@import "review.less";
+@import "form-review.less";
+@import "container.less";
+
+@grey-blue: #81b3d2;
+@white: #ffffff;
+@grey: #eeeeee;
+
+.title(@size:18px; @line:26px;) {
+  font-size: @size;
+  line-height: @line;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: bold;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
