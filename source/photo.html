@@ -9,25 +9,27 @@
 <body class="page-photo">
   <div class="container">
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Добро пожаловать в Седону">
-      </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__item button-close">x</li>
-          <li class="main-nav__item"><a href="index.html">Главная</a></li>
+          <li class="main-nav__item "><a href="index.html">Главная</a></li>
           <li class="main-nav__item main-nav__item--active"><a>Фото и видео</a></li>
           <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
           <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a></li>
         </ul>
+        <div class="wrapper">
+          <a href="index.html" class="page-header__logo">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+          </a>
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        </div>
       </nav>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Фото и видео города Седона</h1>
 
-      <div class="banner">
+      <div class="banner banner--inner">
         <h2 class="visually-hidden">Банер Седоны</h2>
         <img class="banner__image banner__image--inner" width="230" height="40" src="img/text-sedona.svg" alt="Логотип Седоны">
       </div>
@@ -84,12 +86,12 @@
 
       <section class="gallery-video">
         <h2 class="visually-hidden">Видео Седоны</h2>
-        <div class="info-inner">
-          <p class="info-inner__title">Все еще сомневаетесь?</p>
+        <div class="info-inner info-inner--video">
+          <b class="info-inner__title">Все еще сомневаетесь?</b>
           <p class="info-inner__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
         <div class="gallery-video__picture">
-          <img class="gallery-video__image" width="321" height="201" src="https://via.placeholder.com/321x201" alt="Обложка видео">
+          <img class="gallery-video__image" width="321" height="201" src="img/video-mobile@1x.jpg" alt="Обложка видео">
         </div>
         <div class="player">
           <div class="player__top">
