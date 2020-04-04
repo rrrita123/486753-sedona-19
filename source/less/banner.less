@@ -1,16 +1,29 @@
 .banner {
   background-color: #ddebf4;
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: center;
+
   background-repeat: no-repeat;
 
-  &__image--start {
+  &--start {
+    padding-top: 40px;
+    background-position: center;
+  }
+
+  &--inner {
+    background-position: bottom;
+  }
+}
+
+.banner__image {
+  display: block;
+
+  &--start {
     padding-top: 50px;
     padding-bottom: 85px;
   }
 
-  &__image--inner {
-    padding-top: 50px;
-    padding-bottom: 60px;
+  &--inner {
+    padding-top: 52px;
+    padding-bottom: 67px;
   }
 }

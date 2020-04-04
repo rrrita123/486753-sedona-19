@@ -1,24 +1,19 @@
+@import "variables.less";
+@import "mixins.less";
 @import "main-nav.less";
 @import "banner.less";
 @import "info-start.less";
 @import "info.less";
 @import "photo-block.less";
 @import "recommendations.less";
+@import "hotel-search.less";
 @import "page-footer.less";
 @import "social.less";
 @import "copyright.less";
 @import "info-inner.less";
 @import "foto.less";
 @import "container.less";
-
-@grey-blue: #81b3d2;
-@white: #ffffff;
-@grey: #eeeeee;
-
-.title(@size:18px; @line:26px;) {
-  font-size: @size;
-  line-height: @line;
-}
+@import "form-review.less";
 
 @font-face {
   font-family: "PT Sans";
@@ -26,14 +21,16 @@
   src: url("../fonts/ptsans.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsansbold.woff") format("woff");
   src: url("../fonts/ptsansbold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: bold;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 .visually-hidden {
