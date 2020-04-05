@@ -24,13 +24,27 @@
   }
 
   &--grey {
+    position: relative;
     padding-top: 26px;
     padding-bottom: 28px;
     padding-left: 37px;
     padding-right: 37px;
 
     background-color: @grey;
-    border-bottom: 1px solid #d6d6d6;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      width: 280px;
+      height: 1px;
+      background-color: #d6d6d6;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
   }
 
   &--grey:last-child {
