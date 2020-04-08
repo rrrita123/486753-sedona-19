@@ -2,7 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -16,13 +18,13 @@
             <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
             <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a></li>
           </ul>
-          <div class="wrapper">
-            <a class="page-header__logo">
-              <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
-            </a>
-            <button class="main-nav__toggle" type="button">Открыть меню</button>
-          </div>
         </nav>
+        <div class="wrapper">
+          <a class="page-header__logo">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+          </a>
+          <button class="page-header__toggle" type="button">Открыть меню</button>
+        </div>
       </header>
 
       <main class="page-main">
@@ -39,16 +41,18 @@
           <p class="info-start__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </section>
 
-        <section class="info info--blue">
-          <h2 class="visually-hidden">Преимущество 1</h2>
-          <b class="info__title">Настоящий городок</b>
-          <p class="info__number">&ndash; №1 &ndash;</p>
-          <p class="info__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
-        </section>
+        <section class="advantage-photo">
+          <div class="info info--blue">
+            <h2 class="visually-hidden">Преимущество 1</h2>
+            <b class="info__title">Настоящий городок</b>
+            <p class="info__number">&ndash; №1 &ndash;</p>
+            <p class="info__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          </div>
 
-        <div class="photo-block">
-          <img class="photo-block__image" width="320" height="260" src="img/main-city-mobile@1x.jpg" alt="Городок Седона">
-        </div>
+          <div class="photo-block">
+            <img class="photo-block__image" width="320" height="260" src="img/main-city-mobile@1x.jpg" alt="Городок Седона">
+          </div>
+        </section>
 
         <section class="recommendations">
           <h2 class="visually-hidden">Рекомендации по Седоне</h2>
@@ -59,7 +63,7 @@
               </li>
               <li class="recommendations__item recommendations__item--souvenir">
                 <h3 class="recommendations__title">Cувениры</h3>
-                <p class="recommendations__description">Не только китайского, но и местного производства!</p>
+                <p class="recommendations__description">Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!</p>
               </li>
               <li class="recommendations__item recommendations__item--food">
                 <h3 class="recommendations__title">Еда</h3>
@@ -68,33 +72,35 @@
             </ul>
         </section>
 
-        <section class="info info--blue-other">
-          <h2 class="visually-hidden">Преимущество 2</h2>
-          <b class="info__title">Там есть мост дьявола</b>
-          <p class="info__number">&ndash; №2 &ndash;</p>
-          <p class="info__text">Да, по нему можно пройти! если вы осмелитесь, конечно</p>
-        </section>
+        <section class="advantage-photo">
+          <div class="info info--blue-other">
+            <h2 class="visually-hidden">Преимущество 2</h2>
+            <b class="info__title info__title--blue">Там есть мост дьявола</b>
+            <p class="info__number">&ndash; №2 &ndash;</p>
+            <p class="info__text">Да, по нему можно пройти! если вы осмелитесь, конечно</p>
+          </div>
 
-        <div class="photo-block">
-          <img class="photo-block__image" width="320" height="260" src="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола">
-        </div>
+          <div class="photo-block photo-block--rigth">
+            <img class="photo-block__image" width="320" height="260" src="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола">
+          </div>
+        </section>
 
         <section class="advantage-other">
           <h2 class="visually-hidden">Другие преимущества</h2>
           <div class="info info--grey">
-            <b class="info__title">Небольшая площадь</b>
+            <b class="info__title info__title--grey">Небольшая площадь</b>
             <p class="info__number">&ndash; №3 &ndash;</p>
-            <p class="info__text">Все интересные места находятся очень близко</p>
+            <p class="info__text info__text--grey">Все интересные места находятся очень близко</p>
           </div>
           <div class="info info--grey">
-            <b class="info__title">Красивая дорога</b>
+            <b class="info__title info__title--grey">Красивая дорога</b>
             <p class="info__number">&ndash; №4 &ndash;</p>
-            <p class="info__text">Ехать в седону из лас-вегаса совсем не скучно!</p>
+            <p class="info__text info__text--grey">Ехать в седону из лас-вегаса совсем не скучно!</p>
           </div>
           <div class="info info--grey">
-            <b class="info__title">Мало туристов</b>
+            <b class="info__title info__title--grey">Мало туристов</b>
             <p class="info__number">&ndash; №5 &ndash;</p>
-            <p class="info__text">Большинство едет в гранд каньон и толпится там</p>
+            <p class="info__text info__text--grey">Большинство едет в гранд каньон и толпится там</p>
           </div>
         </section>
 
@@ -116,13 +122,13 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">Twitter</a>
+              <a class="social__link social__link--twitter" href="#">T</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Facebook</a>
+              <a class="social__link social__link--facebook" href="#">F</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="#">Youtube</a>
+              <a class="social__link social__link--youtube" href="#">Y</a>
             </li>
           </ul>
         </div>
