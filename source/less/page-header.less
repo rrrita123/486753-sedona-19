@@ -1,0 +1,25 @@
+.page-header__logo-image {
+  height: 83px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    position: relative;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo::before {
+    content: url("../img/logo-sedona-desktop.svg");
+    width: 188px;
+    height: 96px;
+  }
+
+  .page-header__logo-image {
+    display: none;
+  }
+}

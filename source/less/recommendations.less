@@ -23,3 +23,55 @@
 .recommendations__description {
   margin: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .recommendations__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 33px;
+  }
+
+  .recommendations__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 49px;
+    padding-right: 48px;
+    padding-top: 124px;
+    width: 157px;
+    text-align: center;
+
+
+    &:nth-child(2) {
+      width: 162px;
+      order: 2;
+    }
+  }
+
+  .recommendations__title {
+    .title(21px; 26px);
+  }
+
+  .recommendations__description {
+    margin-top: 7px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .recommendations__list {
+    padding-bottom: 54px;
+  }
+
+  .recommendations__item {
+    width: 284px;
+    padding-left: 58px;
+    padding-right: 58px;
+
+    &:nth-child(2) {
+      width: 250px;
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+  }
+}
