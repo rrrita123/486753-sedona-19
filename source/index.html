@@ -49,9 +49,11 @@
             <p class="info__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
 
-          <div class="photo-block">
-            <img class="photo-block__image" width="320" height="260" src="img/main-city-mobile@1x.jpg" alt="Городок Седона">
-          </div>
+          <picture class="photo-block">
+            <source class="photo-block__desktop" srcset="img/main-city-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source srcset="img/main-city-tablet@1x.jpg" media="(min-width: 768px)">
+            <img class="photo-block__image" width="320" height="260" srcset="img/main-city-mobile@1x.jpg" alt="Городок Седона">
+          </picture>
         </section>
 
         <section class="recommendations">
@@ -80,9 +82,11 @@
             <p class="info__text">Да, по нему можно пройти! если вы осмелитесь, конечно</p>
           </div>
 
-          <div class="photo-block photo-block--rigth">
-            <img class="photo-block__image" width="320" height="260" src="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола">
-          </div>
+          <picture class="photo-block photo-block--rigth">
+            <source srcset="img/main-bridge-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source srcset="img/main-bridge-tablet@1x.jpg" media="(min-width: 768px)">
+            <img class="photo-block__image" width="320" height="260" srcset="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола">
+          </picture>
         </section>
 
         <section class="advantage-other">
@@ -107,7 +111,7 @@
         <section class="hotel-search">
           <h2 class="visually-hidden">Поиск гостиницы</h2>
           <p class="hotel-search__title">Заинтересовались?</p>
-          <p class="hotel-search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <p class="hotel-search__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <a class="hotel-search__button button-form" href="#">Найти гостиницу</a>
         </section>
 

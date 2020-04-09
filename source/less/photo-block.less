@@ -5,3 +5,15 @@
 .photo-block__image {
   display: block;
 }
+
+@media (min-width: @desktop-width) {
+  .photo-block {
+    flex-grow: 1;
+    height: 256px;
+  }
+
+  .photo-block__desktop {
+    object-fit: fill;
+    object-position: center;
+  }
+}
