@@ -11,3 +11,29 @@
   font-weight: bold;
   text-align: center;
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .page-footer__contact {
+    margin-right: 112px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    margin-left: 119px;
+    margin-right: 119px;
+  }
+
+  .page-footer__contact {
+    margin-right: 283px;
+  }
+}

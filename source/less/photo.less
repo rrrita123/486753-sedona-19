@@ -1,0 +1,140 @@
+.photo__item {
+  padding-top: 22px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  line-height: 24px;
+  border-bottom: 1px solid @grey-border;
+}
+
+.photo__picture {
+  display: block;
+  background-color: @bg-img;
+
+  width: 280px;
+  height: 280px;
+}
+
+.photo__title {
+  margin: 0;
+  padding-top: 9px;
+
+  font-size: 14px;
+}
+
+.photo__author {
+  margin: 0;
+
+  text-transform: none;
+  color: #333333;
+}
+
+.photo__like {
+  margin: 0;
+  padding-top: 8px;
+  padding-left: 37px;
+
+  font-weight: bold;
+}
+
+@media (min-width: @tablet-width) {
+  .photo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .photo__item {
+    width: 324px;
+    padding: 0;
+    border-bottom: none;
+
+    &:nth-child(2) {
+      width: 100%;
+    }
+  }
+
+  .photo__caption {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+
+    background-color: @white-grey;
+  }
+
+  .photo__title {
+    padding-top: 4px;
+  }
+
+  .photo__like {
+    margin-left: auto;
+  }
+
+  .photo__picture {
+    width: 324px;
+    height: 267px;
+  }
+
+  .photo__picture--sunset {
+    width: 648px;
+    height: 400px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .photo__item {
+    &:nth-child(even) .photo__caption {
+      background-color: @white-odd;
+    }
+
+    &:nth-child(2) .photo__caption {
+      background-color: @white-grey;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .photo__item {
+    position: relative;
+    width: 400px;
+
+    &:nth-child(2) .photo__caption {
+      width: 1200px;
+      box-sizing: border-box;
+    }
+  }
+
+  .photo__caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(1px, 1px, 1px, 0.3);
+  }
+
+  .photo__title,
+  .photo__like,
+  .photo__author {
+    color: @white;
+  }
+
+  .photo__picture {
+    width: 400px;
+    height: 267px;
+  }
+
+  .photo__picture--sunset {
+    width: 1200px;
+    height: 400px;
+  }
+}

@@ -1,7 +1,30 @@
 .photo-block {
-  background-color: #ddebf4;
+  display: block;
+  background-color: @bg-img;
 }
 
 .photo-block__image {
   display: block;
+  height: 260px;
+  object-fit: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-block__image {
+    height: 256px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-block {
+    flex-grow: 1;
+  }
+
+  .photo-block__desktop--city {
+    object-position: center;
+  }
+
+  .photo-block__image--bridge {
+    object-position: 0 -75px;
+  }
 }

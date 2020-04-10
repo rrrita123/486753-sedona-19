@@ -35,4 +35,49 @@
 .info-inner__text {
   padding-top: 12px;
   line-height: 24px;
+  color: #333333;
+}
+
+@media (min-width: @tablet-width) {
+  .info-inner {
+    padding-top: 74px;
+    padding-bottom: 59px;
+    border-bottom: none;
+  }
+
+  .info-inner__title {
+    .title(30px;);
+  }
+
+  .info-inner__text {
+    width: 428px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .info-inner__text--video {
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+
+  .info-inner--video {
+    padding-top: 67px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info-inner {
+    padding-top: 110px;
+    padding-bottom: 61px;
+  }
+
+  .info-inner__text--video {
+    margin-bottom: 64px;
+  }
+
+  .info-inner--video {
+    padding-top: 71px;
+    padding-bottom: 7px;
+  }
 }
