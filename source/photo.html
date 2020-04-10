@@ -45,7 +45,11 @@
         <h2 class="visually-hidden">Галерея фото</h2>
         <div class="photo__item">
           <a class="photo__big" href="#">
-            <img class="photo__picture" width="280" height="280" src="img/photo-sunset-mobile@1x.jpg" alt="Просторы Седоны">
+            <picture>
+              <source srcset="img/photo-sunset-desktop@1x.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-sunset-tablet@1x.jpg" media="(min-width: 768px)">
+              <img class="photo__picture photo__picture--sunset" src="img/photo-sunset-mobile@1x.jpg" alt="Просторы Седоны">
+            </picture>
           </a>
           <div class="photo__caption">
             <div class="photo__wrapper">
@@ -59,7 +63,11 @@
         </div>
         <div class="photo__item">
           <a class="photo__big" href="#">
-            <img class="photo__picture" width="280" height="280" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
+            <picture>
+              <source srcset="img/photo-cactus-desktop@1x.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-cactus-tablet@1x.jpg" media="(min-width: 768px)">
+              <img class="photo__picture" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
+            </picture>
           </a>
           <div class="photo__caption">
             <div class="photo__wrapper">
@@ -73,7 +81,11 @@
         </div>
         <div class="photo__item">
           <a class="photo__big" href="#">
-            <img class="photo__picture" width="280" height="280" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
+            <picture>
+              <source srcset="img/photo-roads-desktop@1x.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-roads-tablet@1x.jpg" media="(min-width: 768px)">
+              <img class="photo__picture" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
+            </picture>
           </a>
           <div class="photo__caption">
             <div class="photo__wrapper">
@@ -87,7 +99,11 @@
         </div>
         <div class="photo__item">
           <a class="photo__big" href="#">
-            <img class="photo__picture" width="280" height="280" src="img/main-bridge-mobile@1x.jpg" alt="Мост дьявола">
+            <picture>
+              <source srcset="img/photo-bridge-desktop@1x.jpg" media="(min-width: 1200px)">
+              <source srcset="img/photo-bridge-tablet@1x.jpg" media="(min-width: 768px)">
+              <img class="photo__picture" src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
+            </picture>
           </a>
             <div class="photo__caption">
               <div class="photo__wrapper">
@@ -105,10 +121,14 @@
         <h2 class="visually-hidden">Видео Седоны</h2>
         <div class="info-inner info-inner--video">
           <b class="info-inner__title">Все еще сомневаетесь?</b>
-          <p class="info-inner__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <p class="info-inner__text info-inner__text--video">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
         <div class="gallery-video__picture">
-          <img class="gallery-video__image" width="321" height="201" src="img/video-mobile@1x.jpg" alt="Обложка видео">
+          <picture>
+            <source srcset="img/video-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source srcset="img/video-tablet@1x.jpg" media="(min-width: 768px)">
+            <img class="gallery-video__image" src="img/video-mobile@1x.jpg" alt="Обложка видео">
+          </picture>
         </div>
         <div class="player">
           <div class="player__top">
