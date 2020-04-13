@@ -1,8 +1,14 @@
+.form-review {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .form-review__item {
   margin: 0;
-  padding-top: 21px;
+  padding: 0;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 21px;
   border: none;
   border-bottom: 1px solid #e5e5e5;
 
@@ -20,6 +26,7 @@
 
   &--opinion {
     padding-bottom: 0;
+    width: 100%;
   }
 
   &--full {
@@ -36,8 +43,8 @@
 }
 
 .form-review__contact {
-  display: inline-block;
-  padding-right: 10px;
+  display: flex;
+  align-items: baseline;
   line-height: 26px;
   color: #333333;
 
@@ -60,7 +67,9 @@
   border: none;
 
   &--name {
-    width: 195px;
+    width: 100%;
+    margin-left: 14px;
+    flex-grow: 1;
   }
 
   &--full {
@@ -114,12 +123,259 @@
   }
 }
 
+.form-review__text--required {
+  display: none;
+}
+
 .form-review__button {
   margin-top: 36px;
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 16px;
   padding-bottom: 16px;
-  width: 280px;
+  padding-left: 48px;
+  padding-right: 48px;
   border: none;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .form-review {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .form-review__item {
+    border-bottom: none;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .form-review__item--name,
+  .form-review__item--opinion {
+    padding-bottom: 34px;
+    width: 50%;
+  }
+
+  .form-review__title {
+    .title(21px;);
+    font-weight: bold;
+  }
+
+  .form-review__title--name,
+  .form-review__title--opinion {
+    text-align: start;
+  }
+
+  .form-review__title--name {
+    margin-left: 57px;
+    margin-bottom: 36px;
+  }
+
+  .form-review__text {
+    margin-top: 52px;
+    margin-bottom: 52px;
+    margin-left: 76px;
+  }
+
+  .form-review__contact {
+    padding: 0;
+    margin-left: 58px;
+  }
+
+  .form-review__item--opinion {
+    order: -1;
+  }
+
+  .form-review__item--feedback {
+    padding-bottom: 34px;
+    width: 100%;
+    border-top: 1px solid @grey-border;
+  }
+
+  .form-review__title--feedback {
+    padding: 0;
+    padding-left: 59px;
+    padding-right: 59px;
+  }
+
+  .form-review__contact--feedback {
+    margin-left: 22px;
+    margin-top: 3px;
+  }
+
+  .form-review__email .form-review__contact--feedback {
+    width: 150px;
+  }
+
+  .form-review__input--feedback {
+    margin-bottom: 20px;
+
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-review__wrapper--showplace {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-review__item--showplace {
+    padding-bottom: 58px;
+
+    width: 100%;
+    border-top: 1px solid @grey-border;
+  }
+
+  .form-review__title--showplace {
+    padding: 0 39px;
+    width: 50%;
+  }
+
+  .form-review__text--showplace {
+    margin-top: 36px;
+    margin-bottom: 26px;
+    margin-right: 7px;
+    margin-left: 110px;
+    width: 22%;
+  }
+
+  .form-review__item--full {
+    width: 100%;
+    border-top: 1px solid @grey-border;
+  }
+
+  .form-review__title--full {
+    padding: 0 76px;
+  }
+
+  .form-review__description--full {
+    margin-top: 40px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .form-review__btn-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .form-review__text--required {
+    display: block;
+    line-height: 26px;
+    color: @black-grey;
+  }
+
+  .form-review__button {
+    padding-left: 64px;
+    padding-right: 77px;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-review {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  .form-review__title--opinion {
+    margin-left: 77px;
+    margin-right: 25px;
+  }
+
+  .form-review__text--opinion {
+    margin-left: 79px;
+  }
+
+  .form-review__title--name {
+    margin-left: 78px;
+    margin-right: 25px;
+  }
+
+  .form-review__contact {
+    margin-left: 80px;
+  }
+
+  .form-review__item--name,
+  .form-review__item--opinion {
+    padding-bottom: 31px;
+  }
+
+  .form-review__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--feedback {
+      padding-top: 54px;
+      padding-bottom: 11px;
+    }
+  }
+
+  .form-review__contact--del {
+    display: none;
+  }
+
+  .form-review__tel,
+  .form-review__email {
+    display: flex;
+    align-items: baseline;
+    width: 50%;
+  }
+
+  .form-review__contact--feedback {
+    margin: 0;
+    margin-right: 16px;
+  }
+
+  .form-review__input--feedback {
+    margin-right: 78px;
+  }
+
+  .form-review__email .form-review__input--feedback {
+    margin-right: 0;
+    flex-shrink: 30;
+  }
+
+  .form-review__title--showplace {
+    width: 42%;
+    padding: 0;
+  }
+
+  .form-review__item--feedback {
+    padding-bottom: 21px;
+  }
+
+  .form-review__item--showplace {
+    padding-bottom: 55px;
+  }
+
+  .form-review__text--showplace {
+    width: 13%;
+    margin-left: 121px;
+    margin-right: 13px;
+
+    &:nth-child(1) {
+      margin-left: 81px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-left: 98px;
+    }
+  }
+
+  .form-review__description--full {
+    margin-top: 41px;
+  }
+
+  .form-review__button {
+    padding-left: 148px;
+    padding-right: 149px;
+    margin-bottom: 6px;
+  }
 }
