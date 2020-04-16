@@ -1,4 +1,5 @@
 .recommendations__list {
+  position: relative;
   padding: 0;
   padding-top: 35px;
   padding-bottom: 9px;
@@ -11,6 +12,11 @@
   padding-left: 70px;
   padding-right: 40px;
   padding-bottom: 28px;
+
+  &::before {
+    // content: url("../img/icon-house.svg");
+    position: absolute;
+  }
 }
 
 .recommendations__title {
@@ -22,6 +28,10 @@
 
 .recommendations__description {
   margin: 0;
+
+  & br {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -41,6 +51,7 @@
     padding-top: 124px;
     width: 157px;
     text-align: center;
+    flex-grow: 1;
 
 
     &:nth-child(2) {
@@ -75,5 +86,9 @@
       padding-left: 75px;
       padding-right: 75px;
     }
+  }
+
+  .recommendations__description br {
+    display: block;
   }
 }

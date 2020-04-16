@@ -2,12 +2,11 @@
   display: flex;
   justify-content: center;
   background-color: #ddebf4;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-
-  background-repeat: no-repeat;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
 
   &--start {
-    background-position: center;
+    background-position: bottom, center;
     height: 389px;
   }
 
@@ -20,13 +19,14 @@
   display: block;
 
   &--start {
+    margin: 0;
     margin-top: 90px;
     width: 281px;
     height: 214px;
   }
 
   &--inner {
-    padding-top: 52px;
+    padding-top: 51px;
     padding-bottom: 67px;
     height: 40px;
     width: 230px;
@@ -36,8 +36,10 @@
 @media (min-width: @tablet-width) {
   .banner {
     height: 518px;
-    background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center bottom, bottom;
+    background-size: 100%;
 
     &--inner {
       height: 290px;
@@ -50,6 +52,7 @@
     margin: 0 auto;
 
     &--start {
+      margin: 0;
       margin-top: 78px;
     }
 
@@ -63,8 +66,8 @@
 
 @media (min-width: @desktop-width) {
   .banner {
-    background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
 
     &--inner {
       height: 302px;

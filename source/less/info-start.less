@@ -6,21 +6,21 @@
 
   &--white {
     padding-top: 40px;
-    padding-bottom: 27px;
     padding-left: 32px;
     padding-right: 32px;
   }
 }
 
 .info-start__title {
-  width: 255px;
+  width: 100%;
   font-size: 18px;
   line-height: 26px;
 }
 
 .info-start__text {
-  width: 255px;
-
+  width: 100%;
+  margin-top: 27px;
+  margin-bottom: 5px;
   line-height: 26px;
   color: #333333;
 }
@@ -28,16 +28,22 @@
 @media (min-width: @tablet-width) {
   .info-start--white {
     padding-top: 50px;
-    padding-bottom: 36px;
+    padding-bottom: 45px;
   }
 
   .info-start__title {
-    width: 490px;
+    width: 64%;
     font-size: 21px;
   }
 
   .info-start__text {
     margin-top: 28px;
-    width: 490px;
+    width: 70%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info-start__title {
+    width: 41%;
   }
 }
