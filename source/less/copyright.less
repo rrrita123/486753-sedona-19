@@ -1,20 +1,36 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  width: 131px;
+  margin: auto;
+}
+
 .copyright__text {
   line-height: 26px;
 }
 
 .copyright__link {
   color: #000000;
+
+  margin-left: 14px;
+}
+
+.copyright path {
+  fill: #000000;
+}
+
+.copyright:hover path,
+.copyright:focus path {
+  fill: @grey-blue;
+}
+
+.copyright:active path {
+  fill: @grey-down;
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    margin: 0;
     margin-left: auto;
-  }
-
-  .copyright__link {
-    margin-left: 6px;
   }
 }

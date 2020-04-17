@@ -1,4 +1,5 @@
 .recommendations__list {
+  position: relative;
   padding: 0;
   padding-top: 35px;
   padding-bottom: 9px;
@@ -8,9 +9,44 @@
 }
 
 .recommendations__item {
+  position: relative;
   padding-left: 70px;
   padding-right: 40px;
   padding-bottom: 28px;
+}
+
+.recommendations__item--house svg,
+.recommendations__item--souvenir svg,
+.recommendations__item--food svg {
+  position: absolute;
+  fill: @grey-blue;
+}
+
+.recommendations__item--house svg {
+  width: 37px;
+  height: 36px;
+  left: 21px;
+  top: -10px;
+}
+
+.recommendations__item--souvenir svg {
+  width: 32px;
+  height: 38px;
+  left: 24px;
+  top: -11px;
+}
+
+.recommendations__item--food svg {
+  width: 40px;
+  height: 35px;
+  left: 18px;
+  top: -5px;
+}
+
+.recommendations__item--house path,
+.recommendations__item--souvenir path,
+.recommendations__item--food path {
+  fill: @grey-blue;
 }
 
 .recommendations__title {
@@ -22,6 +58,10 @@
 
 .recommendations__description {
   margin: 0;
+
+  & br {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -41,12 +81,34 @@
     padding-top: 124px;
     width: 157px;
     text-align: center;
+    flex-grow: 1;
 
 
     &:nth-child(2) {
       width: 162px;
       order: 2;
     }
+  }
+
+  .recommendations__item--house svg {
+    width: 75px;
+    height: 72px;
+    left: 36%;
+    top: 25px;
+  }
+
+  .recommendations__item--souvenir svg {
+    width: 64px;
+    height: 75px;
+    left: 38%;
+    top: 22px;
+  }
+
+  .recommendations__item--food svg {
+    width: 77px;
+    height: 68px;
+    left: 36%;
+    top: 28px;
   }
 
   .recommendations__title {
@@ -75,5 +137,21 @@
       padding-left: 75px;
       padding-right: 75px;
     }
+  }
+
+  .recommendations__description br {
+    display: block;
+  }
+
+  .recommendations__item--house svg {
+    left: 40%;
+  }
+
+  .recommendations__item--souvenir svg {
+    left: 42%;
+  }
+
+  .recommendations__item--food svg {
+    left: 40%;
   }
 }
