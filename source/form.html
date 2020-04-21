@@ -76,11 +76,11 @@
 
           <fieldset class="form-review__item form-review__item--opinion">
             <legend class="form-review__title form-review__title--opinion">Ваше общее впечатление:</legend>
-            <input class="form-review__select visually-hidden" name="positive" id="plus" type="checkbox" checked>
+            <input class="form-review__select visually-hidden" type="radio" name="opinion" value="positive" id="plus" checked>
             <label class="form-review__text form-review__text--opinion" for="plus">Скорее положительное</label>
-            <input class="form-review__select visually-hidden" name="negative" id="minus" type="checkbox">
+            <input class="form-review__select visually-hidden" type="radio" name="opinion" value="negative" id="minus">
             <label class="form-review__text form-review__text--opinion" for="minus">Скорее отрицательное</label>
-            <input class="form-review__select visually-hidden" name="no-answer" id="no-answer" type="checkbox">
+            <input class="form-review__select visually-hidden" type="radio" name="opinion" value="no-answer" id="no-answer">
             <label class="form-review__text form-review__text--opinion" for="no-answer">Затрудняюсь ответить</label>
           </fieldset>
 
