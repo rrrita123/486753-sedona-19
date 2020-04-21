@@ -6,6 +6,8 @@
   line-height: 26px;
   color: @white;
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -19,5 +21,15 @@
 
   &:disabled {
     background-color: @grey-disabled;
+  }
+}
+
+.button-form__popup {
+  font-size: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .button-form__popup {
+    font-size: 21px;
   }
 }

@@ -40,10 +40,38 @@
   color: #333333;
 }
 
+.info-inner--error,
+.info-inner--message {
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+  padding-bottom: 35px;
+  margin-bottom: 46px;
+}
+
+.info-inner__text--error,
+.info-inner__text--message {
+  display: block;
+  width: 67%;
+  margin: 14px auto 23px;
+}
+
+.info-inner--message {
+  padding-top: 43px;
+  padding-bottom: 0;
+}
+
+.info-inner__text--message {
+  padding-bottom: 11px;
+}
+
+.info-inner__wrapper-color {
+  background-color: #f2f2f2;
+  padding: 6.25%;
+}
+
 @media (min-width: @tablet-width) {
   .info-inner {
     padding-top: 74px;
-    padding-bottom: 59px;
+    padding-bottom: 46px;
     border-bottom: none;
   }
 
@@ -58,25 +86,59 @@
     margin-bottom: 10px;
   }
 
+  .info-inner__text--foto {
+    margin-bottom: 23px;
+  }
+
   .info-inner__text--video {
     width: 70%;
     margin-top: 14px;
-    margin-bottom: 14px;
+    margin-bottom: 27px;
   }
 
   .info-inner--video {
     padding-top: 67px;
+  }
+
+  .info-inner--message {
+    width: 83.4%;
+    margin: 15px auto 35px;
+    padding-top: 62px;
+    padding-bottom: 0;
+  }
+
+  .info-inner__text--message {
+    width: 65%;
+    margin-bottom: 23px;
+  }
+
+  .info-inner__wrapper-color {
+    padding: 6.9%;
+  }
+
+  .info-inner--error {
+    width: 52.1%;
+    margin: auto;
+    padding-top: 57px;
+    padding-bottom: 49px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .info-inner {
     padding-top: 110px;
-    padding-bottom: 60px;
+  }
+
+  .info-inner--review {
+    padding-bottom: 31px;
   }
 
   .info-inner__text {
     width: 38%;
+  }
+
+  .info-inner--foto {
+    padding-bottom: 47px;
   }
 
   .info-inner__text--video {
@@ -87,5 +149,19 @@
   .info-inner--video {
     padding-top: 71px;
     padding-bottom: 7px;
+  }
+
+  .info-inner--message {
+    width: 53.4%;
+    padding-top: 62px;
+  }
+
+  .info-inner__text--message {
+    width: 64.7%;
+  }
+
+  .info-inner--error {
+    width: 33.4%;
+    padding-top: 55px;
   }
 }
