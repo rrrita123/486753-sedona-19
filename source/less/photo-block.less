@@ -10,6 +10,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .photo-block {
+    flex-grow: 1;
+  }
+
   .photo-block__image {
     height: 256px;
     flex-grow: 1;
@@ -17,10 +21,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .photo-block {
-    flex-grow: 1;
-  }
-
   .photo-block__desktop--city {
     object-position: center;
   }
