@@ -38,7 +38,9 @@
     background-color: @blue-active;
   }
 
-  &:active path {
+  &:active .social__link--icon-twitter,
+  &:active .social__link--icon-facebook,
+  &:active .social__link--icon-youtube {
     opacity: 0.3;
   }
 }
@@ -52,9 +54,9 @@
   width: 47px;
 }
 
-.social__item--twitter path,
-.social__item--facebook path,
-.social__item--youtube path {
+.social__link--icon-twitter,
+.social__link--icon-facebook,
+.social__link--icon-youtube {
   fill: @white;
 }
 
