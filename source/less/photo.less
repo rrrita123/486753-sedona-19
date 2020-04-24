@@ -60,17 +60,16 @@
   padding-left: 37px;
 
   font-weight: bold;
-
-  & svg {
-    position: absolute;
-    left: 0;
-    top: 6px;
-  }
-
-  & path {
-    opacity: 0.3;
-  }
 }
+
+.photo__like--icon-like {
+  position: absolute;
+  left: 0;
+  top: 6px;
+
+  opacity: 0.3;
+}
+
 
 @media (min-width: @tablet-width) {
   .photo {
@@ -112,7 +111,7 @@
     width: 33px;
   }
 
-  .photo__like svg {
+  .photo__like--icon-like {
     top: 7px;
   }
 
@@ -169,7 +168,7 @@
     color: @white;
   }
 
-  .photo__like path {
+  .photo__like--icon-like {
     fill: @white;
     opacity: 1;
   }

@@ -53,19 +53,29 @@
   background-color: transparent;
 
   cursor: pointer;
-
-  &:hover path,
-  &:hover polygon,
-  &:focus path,
-  &:focus polygon {
-    fill: @black-grey;
-  }
-
-  &:active path,
-  &:active polygon {
-    opacity: 0.3;
-  }
 }
+
+.player__button--icon-replay,
+.player__button--icon-cc,
+.player__button--icon-fullscreen {
+  fill: @grey-player;
+}
+
+.player__button:hover .player__button--icon-replay,
+.player__button:hover .player__button--icon-cc,
+.player__button:hover .player__button--icon-fullscreen,
+.player__button:focus .player__button--icon-replay,
+.player__button:focus .player__button--icon-cc,
+.player__button:focus .player__button--icon-fullscreen {
+  fill: @black-grey;
+}
+
+.player__button:active .player__button--icon-replay,
+.player__button:active .player__button--icon-cc,
+.player__button:active .player__button--icon-fullscreen {
+  opacity: 0.3;
+}
+
 
 .player__replay {
   margin-left: 6.9%;
@@ -78,12 +88,6 @@
 
 .player__full-screen {
   margin-right: 6%;
-}
-
-.player__replay path,
-.player__cc path,
-.player__full-screen polygon {
-  fill: @grey-player;
 }
 
 @media (min-width: @tablet-width) {
@@ -117,25 +121,26 @@
     background-color: transparent;
   }
 
-  .player__button {
-    &:hover path,
-    &:hover polygon,
-    &:focus path,
-    &:focus polygon {
-      fill: @white;
-      opacity: 0.6;
-    }
-
-    &:active path,
-    &:active polygon {
-      opacity: 0.3;
-    }
+  .player__button--icon-replay,
+  .player__button--icon-cc,
+  .player__button--icon-fullscreen {
+    fill: @white;
   }
 
-  .player__replay path,
-  .player__cc path,
-  .player__full-screen polygon {
+  .player__button:hover .player__button--icon-replay,
+  .player__button:hover .player__button--icon-cc,
+  .player__button:hover .player__button--icon-fullscreen,
+  .player__button:focus .player__button--icon-replay,
+  .player__button:focus .player__button--icon-cc,
+  .player__button:focus .player__button--icon-fullscreen {
     fill: @white;
+    opacity: 0.6;
+  }
+
+  .player__button:active .player__button--icon-replay,
+  .player__button:active .player__button--icon-cc,
+  .player__button:active .player__button--icon-fullscreen {
+    opacity: 0.3;
   }
 
   .player__replay {
