@@ -261,7 +261,7 @@
   position: relative;
 }
 
-.form-review__icon-tel::after {
+.form-review__icon--tel::after {
   content: url("../img/icon-phone.svg");
   position: absolute;
   right: 0;
@@ -270,7 +270,7 @@
   background-color: #e6e6e6;
 }
 
-.form-review__icon-email::after {
+.form-review__icon--email::after {
   content: url("../img/icon-mail.svg");
   position: absolute;
   right: 0;
@@ -289,6 +289,20 @@
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+.form-review__input--error {
+  border: 4px solid tomato;
+}
+
+.form-review__input--error + .form-review__icon::after {
+  border-left: 4px solid tomato;
+}
+
+.form-review__input--error:hover + .form-review__icon::after,
+.form-review__input--error:focus + .form-review__icon::after,
+.form-review__input--error:active + .form-review__icon::after {
+  border-left: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -469,8 +483,8 @@
     margin-left: 0;
   }
 
-  .form-review__icon-tel::after,
-  .form-review__icon-email::after {
+  .form-review__icon--tel::after,
+  .form-review__icon--email::after {
     top: 29%;
   }
 
@@ -555,8 +569,8 @@
     margin-left: auto;
   }
 
-  .form-review__icon-tel::after,
-  .form-review__icon-email::after {
+  .form-review__icon--tel::after,
+  .form-review__icon--email::after {
     top: 0;
   }
 
