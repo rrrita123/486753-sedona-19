@@ -48,10 +48,10 @@
           <fieldset class="form-review__item form-review__item--name">
             <legend class="form-review__title form-review__title--name">Представьтесь:</legend>
             <label class="form-review__contact" for="name">Имя*:
-              <input class="form-review__input form-review__input--name" name="name-tourist" id="name" type="text" placeholder="Петр" required>
+              <input class="form-review__input form-review__input--name js-input" name="name-tourist" id="name" type="text" placeholder="Петр" required>
             </label>
             <label class="form-review__contact" for="surname">Фамилия*:
-              <input class="form-review__input form-review__input--name" name="surname-tourist" id="surname" type="text" placeholder="Иванов" required>
+              <input class="form-review__input form-review__input--name js-input" name="surname-tourist" id="surname" type="text" placeholder="Иванов" required>
             </label>
             <label class="form-review__contact" for="patronymic">Отчество:
               <input class="form-review__input form-review__input--name" name="patronymic-tourist" id="patronymic" type="text" placeholder="Александрович">
@@ -63,12 +63,12 @@
             <div class="form-review__wrapper form-review__wrapper--feedback">
             <div class="form-review__tel">
               <label class="form-review__contact form-review__contact--feedback" for="tel"><span class="form-review__contact--del">Контактный</span> телефон*:</label>
-              <input class="form-review__input form-review__input--feedback" name="tel-tourist" id="tel" type="tel" placeholder="Введите телефон" pattern="[0-9]{11}">
+              <input class="form-review__input form-review__input--feedback js-input" name="tel-tourist" id="tel" type="tel" placeholder="Введите телефон" required pattern="[0-9]{11}">
               <span class="form-review__icon form-review__icon--tel"></span>
             </div>
             <div class="form-review__email">
               <label class="form-review__contact form-review__contact--feedback" for="email">Электронная почта*:</label>
-              <input class="form-review__input form-review__input--feedback" name="email-tourist" id="email" type="email" placeholder="Введите e-mail">
+              <input class="form-review__input form-review__input--feedback js-input" name="email-tourist" id="email" type="email" placeholder="Введите e-mail" required>
               <span class="form-review__icon form-review__icon--email"></span>
             </div>
             </div>
