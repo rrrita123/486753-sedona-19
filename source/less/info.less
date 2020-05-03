@@ -3,26 +3,6 @@
 
   text-align: center;
 
-  &--blue {
-    padding-top: 77px;
-    padding-bottom: 40px;
-    padding-left: 28px;
-    padding-right: 28px;
-
-    background-color: @grey-blue;
-    color: @white;
-  }
-
-  &--blue-other {
-    padding-top: 39px;
-    padding-bottom: 39px;
-    padding-left: 28px;
-    padding-right: 28px;
-
-    background-color: @grey-blue;
-    color: @white;
-  }
-
   &--grey {
     position: relative;
     padding-top: 26px;
@@ -52,8 +32,26 @@
   }
 }
 
+.info__blue {
+  background-color: @grey-blue;
+  color: @white;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 40px;
+
+  &--first {
+    padding-top: 77px;
+    padding-bottom: 40px;
+  }
+
+  &--other {
+    padding-top: 39px;
+    padding-bottom: 39px;
+  }
+}
+
 @media (max-width: 767px) {
-  .info--blue {
+  .info__blue--first {
     background-image: url("../img/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: top;
@@ -76,24 +74,26 @@
 }
 
 @media (min-width: @tablet-width) {
-  .info--blue {
-    width: 162px;
-    padding-left: 47px;
-    padding-right: 47px;
-    padding-top: 46px;
+  .info__blue {
+    width: 33.33%;
+    box-sizing: border-box;
+
+    &--first {
+      padding-left: 47px;
+      padding-right: 47px;
+      padding-top: 46px;
+    }
+
+    &--other {
+      padding-left: 45px;
+      padding-right: 45px;
+      padding-top: 45px;
+      order: 1;
+    }
   }
 
   .info__text--blue {
     padding-top: 6px;
-  }
-
-  .info--blue-other {
-    width: 256px;
-    box-sizing: border-box;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 45px;
-    order: 1;
   }
 
   .info__title {

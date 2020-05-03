@@ -4,10 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона - фото и видео</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-photo">
+
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <div class="container">
     <header class="page-header page-header--closed">
       <nav class="main-nav">
@@ -128,7 +133,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x" >
+              <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
 
               <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
@@ -175,19 +180,19 @@
           <div class="player__bottom">
             <button class="player__button player__replay" type="button" aria-label="Повторить видео">
               <svg class="player__button--icon-replay" width="16" height="20">
-                <use xlink:href="img/sprite.svg#icon-replay"></use>
+                <use xlink:href="#icon-video-replay"></use>
               </svg>
             </button>
 
             <button class="player__button player__cc" type="button" aria-label="Субтитры">
               <svg class="player__button--icon-cc" width="32" height="20">
-                <use xlink:href="img/sprite.svg#icon-cc"></use>
+                <use xlink:href="#icon-video-subtitles"></use>
               </svg>
             </button>
 
             <button class="player__button player__full-screen" type="button" aria-label="Во весь экран">
               <svg class="player__button--icon-fullscreen" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-fullscreen"></use>
+                <use xlink:href="#icon-video-fullscreen"></use>
               </svg>
             </button>
           </div>
@@ -236,15 +241,16 @@
     </footer>
   </div>
 
-  <script src="js/popup.js"></script>
-
+  <!-- Picture element -->
   <script>
-    // Picture element HTML5 shiv
     document.createElement( "picture" );
   </script>
-  <script src="js/picturefill.min.js" async></script>
+  <script src="js/picturefill.min.js" async=""></script>
 
+  <!-- svg -->
   <script src="js/svg4everybody.js"></script>
   <script>svg4everybody ()</script>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

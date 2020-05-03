@@ -23,22 +23,18 @@ buttonOpen.addEventListener("click", function(evt) {
 // Проверка заполнения обязательных полей в форме
 if(document.querySelector(".form-review")) {
   var form = document.querySelector(".form-review");
-  var nameTourist = form.querySelector("#name");
-  var surnameTourist = form.querySelector("#surname");
-  var telTourist = form.querySelector("#tel");
-  var emailTourist = form.querySelector("#email");
   var messageError = document.querySelector(".info-inner__error");
   var messageSabmit = document.querySelector(".info-inner__message");
-  var buttonForm = document.querySelector(".button-form");
-  var buttonPopup = document.querySelector(".button-form__popup");
+  var collectionButton = document.querySelectorAll(".button-form__popup");
   var collectionInput = form.querySelectorAll(".js-input");
 
-  form.addEventListener("submit", function(evt) {
-    evt.preventDefault();
-    var valid = true;
+  collectionInput.forEach((i) => {
+    i.required = false; // отмена required у input
+  });
 
+  form.addEventListener("submit", function(evt) {
+    var valid = true;
     collectionInput.forEach((i) => {
-      i.required = false;
       if (!i.value) {
         valid = false;
         i.classList.add("form-review__input--error");
@@ -51,13 +47,17 @@ if(document.querySelector(".form-review")) {
       messageSabmit.classList.add("info-inner--show");
     }
     else {
+      evt.preventDefault();
       messageError.classList.add("info-inner--show");
     }
   });
 
-  buttonPopup.addEventListener("click", function(evt) {
-    messageError.classList.remove("info-inner--show");
+  collectionButton.forEach((b) => {
+    b.addEventListener("click", function(evt) {
+    this.closest('.info-inner--show').classList.remove("info-inner--show");
   });
+})
+
 }
 
 //Create map
