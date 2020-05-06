@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize-min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -28,7 +29,7 @@
           <a class="page-header__logo">
             <picture>
               <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
-              <img class="page-header__logo-image" width="102" height="83" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
+              <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" alt="Логотип Седона">
             </picture>
           </a>
           <button class="page-header__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -52,7 +53,7 @@
         <section class="advantage-photo">
           <div class="info info__blue info__blue--first">
             <h2 class="visually-hidden">Преимущество 1</h2>
-            <b class="info__title">Настоящий городок</b>
+            <b class="info__title info__title--blue">Настоящий городок</b>
             <p class="info__number">&ndash; №1 &ndash;</p>
             <p class="info__text info__text--blue">Седона&nbsp;не&nbsp;аттракцион для туристов, там течет своя жизнь</p>
           </div>
@@ -102,7 +103,7 @@
             <h2 class="visually-hidden">Преимущество 2</h2>
             <b class="info__title info__title--blue-other">Там есть<br> мост дьявола</b>
             <p class="info__number">&ndash; №2 &ndash;</p>
-            <p class="info__text info__text--blue-other">Да, по нему можно пройти! если вы осмелитесь, конечно</p>
+            <p class="info__text info__text--blue">Да, по нему можно пройти! если&nbsp;вы осмелитесь, конечно</p>
           </div>
 
           <picture class="photo-block photo-block--rigth">
@@ -126,7 +127,7 @@
           <div class="info info--grey">
             <b class="info__title info__title--grey">Красивая дорога</b>
             <p class="info__number">&ndash; №4 &ndash;</p>
-            <p class="info__text info__text--grey">Ехать в седону из лас-вегаса совсем не скучно!</p>
+            <p class="info__text info__text--grey">Ехать в седону из лас&nbsp;-&nbsp;вегаса совсем не&nbsp;скучно!</p>
           </div>
           <div class="info info--grey">
             <b class="info__title info__title--grey">Мало туристов</b>
@@ -151,7 +152,7 @@
 
             <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-            <img class="map__address" width="320" height="350" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="США, штат Аризона, город Седона">
+            <img class="map__address" width="320" height="350" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Адрес на карте: США, штат Аризона, город Седона">
           </picture>
         </section>
       </main>
@@ -199,19 +200,19 @@
     </div>
 
     <!-- Picture element HTML5 shiv -->
-    <script>
+    <!-- <script>
       document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.min.js" async></script>
+    <script src="js/picturefill.min.js" async></script> -->
 
     <!-- svg -->
-    <script src="js/svg4everybody.js"></script>
-    <script>svg4everybody ()</script>
+    <!-- <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody ()</script> -->
 
     <!-- Google карты -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYwKRFq8-eM32D5BktNBZdY9vfsCfCmvM&callback=initMap">
     </script>
 
-    <script src="js/script.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

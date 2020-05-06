@@ -54,7 +54,7 @@ if(document.querySelector(".form-review")) {
 
   collectionButton.forEach((b) => {
     b.addEventListener("click", function(evt) {
-    this.closest('.info-inner--show').classList.remove("info-inner--show");
+    this.closest(".info-inner--show").classList.remove("info-inner--show");
   });
 })
 
@@ -64,7 +64,7 @@ if(document.querySelector(".form-review")) {
 var map;
 function initMap() {
   map = new google.maps.Map(
-    document.getElementById('map'),
+    document.getElementById("map"),
     {center: new google.maps.LatLng(34.961755, -111.758092), zoom: 7}
   );
 
@@ -73,3 +73,9 @@ function initMap() {
     map: map
   });
 }
+
+// для скрипта Picture element, чтобы отображались в ie
+document.createElement("picture");
+
+// для отображение svg спрайтов в ie
+svg4everybody();

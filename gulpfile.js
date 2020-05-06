@@ -12,7 +12,11 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
+var uglify = require("gulp-uglify");
+var concat = require('gulp-concat');
+var babel = require("gulp-babel");
 var include = require("posthtml-include");
+var htmlmin = require("gulp-htmlmin");
 var del = require("del");
 var server = require("browser-sync").create(); //вызываем server
 
@@ -54,20 +58,35 @@ gulp.task("sprite", function(){ //задача создания из иконо�
   .pipe(gulp.dest("build/img"))
 });
 
-gulp.task("html", function() {
+gulp.task("html", function() {  //в html добавляем новый тег include для спрайтов
   return gulp.src("source/*.html")
   .pipe(posthtml([
     include()
   ]))
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"))
 });
+
+gulp.task("script", function() { //задача для минификации js
+  return gulp.src([
+    "source/js/picturefill.min.js",
+    "source/js/svg4everybody.js",
+    "source/js/script.js"
+  ])
+  .pipe(babel({  //преобразует знак => в script.js
+    presets: ['@babel/env']
+  }))
+  .pipe(concat('scripts.min.js')) //собирает в один файл все js
+  .pipe(uglify()) //минимизация js
+  .pipe(gulp.dest("build/js"))
+})
 
 gulp.task("copy", function() { //задача копирования всех не отпимизированных файлов
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
-    "source/*.ico"
+    "source/*.ico",
+    "source/css/normalize-min.css"
   ], {
     base: "source" //путь
   })
@@ -90,6 +109,7 @@ gulp.task("server", function () { //создание задачи про сер�
   gulp.watch("source/less/**/*.less", gulp.series("css")); //указаваем серверу, смотреть watch за изменениями в файле и потом выполнить задачу gulp css
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh")); //как только измененится img запустится спрайт и изменится html
   gulp.watch("source/*.html", gulp.series("html", "refresh")); //указаваем серверу, смотреть за изменениями html и как изменится перезагрузить сервер
+  // gulp.watch("source/js/**/*.js", gulp.series("script"));
 });
 
 gulp.task("refresh", function(done) { //задача для перезагрузки страницы
@@ -102,7 +122,8 @@ gulp.task("build", gulp.series( //задача для npm run build
   "copy",
   "css",
   "sprite",
-  "html"
+  "html",
+  "script"
 ));
 gulp.task("start", gulp.series("build", "server"));  //при команде npm start, запускается gulp start
 //первая задача css, вторая server последовательно

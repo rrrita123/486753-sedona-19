@@ -62,22 +62,22 @@
   .recommendations__list {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 33px;
+    padding-bottom: 31px;
   }
 
   .recommendations__item {
     display: flex;
     flex-direction: column;
     width: 33.33%;
-    padding-left: 49px;
+    padding-left: 46px;
     padding-right: 48px;
     padding-top: 124px;
+    padding-bottom: 30px;
     box-sizing: border-box;
 
     text-align: center;
 
     &:nth-child(2) {
-      // width: 162px;
       order: 2;
     }
   }
@@ -119,21 +119,25 @@
 
 @media (min-width: @desktop-width) {
   .recommendations__list {
-    padding-bottom: 54px;
+    padding-bottom: 52px;
   }
 
   .recommendations__item {
     width: 400px;
     box-sizing: border-box;
-    padding-left: 58px;
+    padding-left: 54px;
     padding-right: 58px;
 
     &:nth-child(2) {
       width: 400px;
       box-sizing: border-box;
-      padding-left: 75px;
+      padding-left: 67px;
       padding-right: 75px;
     }
+  }
+
+  .recommendations__title {
+    padding-left: 6px;
   }
 
   .recommendations__item--icon-house {
