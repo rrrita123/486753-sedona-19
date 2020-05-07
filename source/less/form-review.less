@@ -20,6 +20,7 @@
 
   &--name {
     padding-bottom: 5px;
+    padding-top: 19px;
   }
 
   &--feedback {
@@ -32,7 +33,7 @@
 
   &--full {
     padding-top: 17px;
-    padding-bottom: 9px;
+    padding-bottom: 14px;
   }
 }
 
@@ -43,10 +44,14 @@
 
 .form-review__title {
   .title();
-  margin: 0;
   padding-top: 18px;
   text-align: center;
   font-weight: bold;
+  margin: auto;
+}
+
+.form-review__title--name {
+  padding-bottom: 2px;
 }
 
 .form-review__contact {
@@ -74,7 +79,7 @@
   border: 4px solid #f2f2f2;
 
   &--name {
-    width: 100%;
+    width: 50%;
     margin-left: 14px;
     flex-grow: 1;
   }
@@ -84,16 +89,34 @@
   }
 
   &--feedback {
-    margin-bottom: 12px;
-    width: 100%;
-    padding-right: 23%;
+    margin-bottom: 0;
+    width: 222px;
+    height: 58px;
+    padding-right: 10px;
     box-sizing: border-box;
   }
+}
 
-  &::placeholder {
-    color: #000000;
-    font-family: "PT Sans", "Arial", sans-serif;
-  }
+.form-review__input::placeholder {
+  color: #000000;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.form-review__input::-moz-placeholder,
+.form-review__description::-moz-placeholder {
+  color: #000000;
+  font-family: "PT Sans", "Arial", sans-serif;
+  opacity: 1;
+}
+
+.form-review__input::-webkit-input-placeholder,
+.form-review__description::-webkit-input-placeholder {
+  color: #000000;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.form-review__input:-ms-input-placeholder {
+  color: #000000;
 }
 
 .form-review__input:hover {
@@ -235,6 +258,11 @@
   border: 4px solid #e5e5e5;
 }
 
+.form-review__description--full {
+  display: block;
+  height: 160px;
+}
+
 .form-review__text--required {
   display: none;
 }
@@ -250,33 +278,34 @@
   display: block;
   width: 100%;
   margin-top: 36px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-top: 17px;
+  padding-bottom: 15px;
 }
 
 .form-review__tel,
 .form-review__email {
   position: relative;
+  margin-bottom: 12px;
+}
+
+.form-review__icon--tel::after,
+.form-review__icon--email::after {
+  position: absolute;
+  height: 58px;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  background-color: #e6e6e6;
 }
 
 .form-review__icon--tel::after {
   content: url("../img/icon-phone.svg");
-  position: absolute;
-  right: 0;
-  top: 31%;
   padding: 20px 20px 14px 20px;
-  background-color: #e6e6e6;
 }
 
 .form-review__icon--email::after {
   content: url("../img/icon-mail.svg");
-  position: absolute;
-  right: 0;
-  top: 31%;
   padding: 22px 21px 14px 21px;
-  background-color: #e6e6e6;
 }
 
 .form-review__btn-error {
@@ -293,10 +322,6 @@
 
 .form-review__input--error {
   border: 4px solid tomato;
-}
-
-.form-review__input--error + .form-review__icon::after {
-  border-left: 4px solid tomato;
 }
 
 .form-review__input--error:hover + .form-review__icon::after,
@@ -340,6 +365,7 @@
   .form-review__title {
     .title(21px;);
     font-weight: bold;
+    margin: 0 auto;
   }
 
   .form-review__title--name,
@@ -347,9 +373,17 @@
     text-align: start;
   }
 
+  .form-review__title--opinion {
+    margin-left: 0;
+  }
+
   .form-review__title--name {
     margin-left: 57px;
     margin-bottom: 36px;
+  }
+
+  .form-review__item--name .form-review__input--name {
+    width: 50%;
   }
 
   .form-review__text {
@@ -367,7 +401,7 @@
   }
 
   .form-review__item--feedback {
-    padding-bottom: 34px;
+    padding-bottom: 30px;
     width: 100%;
     border-top: 1px solid @grey-border;
   }
@@ -383,15 +417,15 @@
     margin-top: 3px;
   }
 
-  .form-review__email .form-review__contact--feedback {
-    width: 150px;
+  .form-review__input--feedback {
+    padding-right: 15px;
+    width: 590px;
+    box-sizing: border-box;
   }
 
-  .form-review__input--feedback {
-    margin-bottom: 21px;
-    padding-right: 10%;
-    width: 100%;
-    box-sizing: border-box;
+  .form-review__email,
+  .form-review__tel {
+    margin-bottom: 24px;
   }
 
   .form-review__wrapper--showplace {
@@ -402,13 +436,13 @@
 
   .form-review__item--showplace {
     position: relative;
-    padding-bottom: 44px;
+    padding-bottom: 43px;
     padding-top: 0;
     width: 100%;
   }
 
   .form-review__title--showplace {
-    padding-bottom: 33px;
+    padding-bottom: 34px;
     width: 50%;
 
     &::before,
@@ -455,8 +489,8 @@
   }
 
   .form-review__description--full {
-    margin-top: 40px;
-    margin-bottom: 16px;
+    margin-top: 41px;
+    margin-bottom: 22px;
     width: 100%;
   }
 
@@ -478,14 +512,8 @@
 
   .form-review__button {
     width: 50%;
-    padding-left: 64px;
-    padding-right: 77px;
+    padding-right: 17px;
     margin-left: 0;
-  }
-
-  .form-review__icon--tel::after,
-  .form-review__icon--email::after {
-    top: 29%;
   }
 
   .form-review__btn-message {
@@ -546,8 +574,12 @@
 
     &--feedback {
       padding-top: 54px;
-      padding-bottom: 11px;
+      padding-bottom: 9px;
     }
+  }
+
+  .form-review__tel .form-review__input--feedback {
+    width: 257px;
   }
 
   .form-review__contact--del {
@@ -557,7 +589,6 @@
   .form-review__tel,
   .form-review__email {
     display: flex;
-    align-items: baseline;
     width: 50%;
   }
 
@@ -569,17 +600,14 @@
     margin-left: auto;
   }
 
-  .form-review__icon--tel::after,
-  .form-review__icon--email::after {
-    top: 0;
-  }
-
   .form-review__contact--feedback {
     margin: 0;
-    margin-right: 16px;
+    margin-right: 17px;
+    align-items: center;
   }
 
   .form-review__email .form-review__input--feedback {
+    width: 259px;
     margin-right: 0;
     flex-shrink: 30;
   }
@@ -587,7 +615,7 @@
   .form-review__title--showplace {
     width: 42%;
     padding: 0;
-    padding-bottom: 34px;
+    padding-bottom: 33px;
   }
 
   .form-review__item--feedback {
@@ -595,7 +623,7 @@
   }
 
   .form-review__item--showplace {
-    padding-bottom: 42px;
+    padding-bottom: 41px;
   }
 
   .form-review__text--showplace {
@@ -614,16 +642,16 @@
 
   .form-review__description--full {
     margin-top: 41px;
-    margin-bottom: 15px;
+    margin-bottom: 21px;
   }
 
   .form-review__btn-wrapper {
-    margin-bottom: 60px;
+    margin-bottom: 61px;
   }
 
   .form-review__button {
-    padding-left: 148px;
-    padding-right: 149px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 6px;
   }
 }

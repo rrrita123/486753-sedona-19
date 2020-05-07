@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона - отправить отзыв</title>
+  <link href="css/normalize-min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -44,7 +46,7 @@
       <section class="info-inner info-inner--review">
         <h2 class="visually-hidden">Информация о фото и видео</h2>
         <b class="info-inner__title">Оставьте свой отзыв</b>
-        <p class="info-inner__text">Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о посещенных вами достопримечательностях</p>
+        <p class="info-inner__text">Помогите нашим отелям стать&nbsp;лучше! оставьте отзыв о&nbsp;них, а&nbsp;также&nbsp;о посещенных вами достопримечательностях</p>
       </section>
 
       <section class="review">
@@ -113,7 +115,7 @@
 
           <fieldset class="form-review__item form-review__item--full">
             <legend class="form-review__title form-review__title--full">Опишите свои эмоции:</legend>
-            <textarea class="form-review__description form-review__description--full" name="text-review" cols="30" rows="4" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="form-review__description form-review__description--full" name="text-review" cols="30" rows="4" placeholder="Опишите подробно все свои восторги" aria-label="Напишите ваш подробный отзыв о Седоне"></textarea>
           </fieldset>
 
           <div class="form-review__btn-wrapper">
@@ -182,16 +184,6 @@
     </section>
   </div>
 
-  <!-- Picture element -->
-  <script>
-    document.createElement( "picture" );
-  </script>
-  <script src="js/picturefill.min.js" async=""></script>
-
-  <!-- svg -->
-  <script src="js/svg4everybody.js"></script>
-  <script>svg4everybody ()</script>
-
-  <script src="js/script.js"></script>
+  <script src="js/scripts.min.js"></script>
 </body>
 </html>

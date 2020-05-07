@@ -1,5 +1,34 @@
 "use strict";
 
+// в ie не работает функция closest для ее полифил
+(function(e){
+  e.closest = e.closest || function(css){
+    var node = this;
+
+    while (node) {
+      if (node.matches(css)) return node;
+      else node = node.parentElement;
+    }
+    return null;
+  }
+})(Element.prototype);
+
+// полифил для matches
+if (!Element.prototype.matches) {
+  Element.prototype.matches =
+    Element.prototype.matchesSelector ||
+    Element.prototype.mozMatchesSelector ||
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.oMatchesSelector ||
+    Element.prototype.webkitMatchesSelector ||
+    function(s) {
+      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+        i = matches.length;
+      while (--i >= 0 && matches.item(i) !== this) {}
+      return i > -1;
+    };
+}
+
 var buttonOpen = document.querySelector(".page-header__button");
 var menu = document.querySelector(".main-nav");
 var pageHeader = document.querySelector(".page-header");
@@ -25,8 +54,8 @@ if(document.querySelector(".form-review")) {
   var form = document.querySelector(".form-review");
   var messageError = document.querySelector(".info-inner__error");
   var messageSabmit = document.querySelector(".info-inner__message");
-  var collectionButton = document.querySelectorAll(".button-form__popup");
-  var collectionInput = form.querySelectorAll(".js-input");
+  var collectionButton = [].slice.call(document.querySelectorAll(".button-form__popup"),0); // фикс для IE - slice помогает сделать массив из querySelectorAll
+  var collectionInput = [].slice.call(form.querySelectorAll(".js-input"),0); // фикс для IE - slice помогает сделать массив из querySelectorAll
 
   collectionInput.forEach((i) => {
     i.required = false; // отмена required у input
@@ -34,7 +63,7 @@ if(document.querySelector(".form-review")) {
 
   form.addEventListener("submit", function(evt) {
     var valid = true;
-    collectionInput.forEach((i) => {
+    collectionInput.forEach((i) => { //проверяем поля на заполнение
       if (!i.value) {
         valid = false;
         i.classList.add("form-review__input--error");
@@ -54,7 +83,7 @@ if(document.querySelector(".form-review")) {
 
   collectionButton.forEach((b) => {
     b.addEventListener("click", function(evt) {
-    this.closest('.info-inner--show').classList.remove("info-inner--show");
+    this.closest(".info-inner--show").classList.remove("info-inner--show"); //ищем родителя кнопки с нижным классом
   });
 })
 
@@ -64,7 +93,7 @@ if(document.querySelector(".form-review")) {
 var map;
 function initMap() {
   map = new google.maps.Map(
-    document.getElementById('map'),
+    document.getElementById("map"),
     {center: new google.maps.LatLng(34.961755, -111.758092), zoom: 7}
   );
 
@@ -73,3 +102,9 @@ function initMap() {
     map: map
   });
 }
+
+// для скрипта Picture element, чтобы отображались в ie
+document.createElement("picture");
+
+// для отображение svg спрайтов в ie
+svg4everybody();
