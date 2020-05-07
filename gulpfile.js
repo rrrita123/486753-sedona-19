@@ -109,7 +109,7 @@ gulp.task("server", function () { //создание задачи про сер�
   gulp.watch("source/less/**/*.less", gulp.series("css")); //указаваем серверу, смотреть watch за изменениями в файле и потом выполнить задачу gulp css
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh")); //как только измененится img запустится спрайт и изменится html
   gulp.watch("source/*.html", gulp.series("html", "refresh")); //указаваем серверу, смотреть за изменениями html и как изменится перезагрузить сервер
-  // gulp.watch("source/js/**/*.js", gulp.series("script"));
+  gulp.watch("source/js/**/*.js", gulp.series("script"));
 });
 
 gulp.task("refresh", function(done) { //задача для перезагрузки страницы
