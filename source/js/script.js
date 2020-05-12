@@ -1,6 +1,6 @@
 "use strict";
 
-// в ie не работает функция closest для ее полифил
+// в ie не работает функция closest для нее полифил
 (function(e){
   e.closest = e.closest || function(css){
     var node = this;
@@ -54,7 +54,7 @@ if(document.querySelector(".form-review")) {
   var form = document.querySelector(".form-review");
   var messageError = document.querySelector(".info-inner__error");
   var messageSabmit = document.querySelector(".info-inner__message");
-  var collectionButton = [].slice.call(document.querySelectorAll(".button-form__popup"),0); // фикс для IE - slice помогает сделать массив из querySelectorAll
+  var collectionButton = [].slice.call(document.querySelectorAll(".js-button"),0); // фикс для IE - slice помогает сделать массив из querySelectorAll
   var collectionInput = [].slice.call(form.querySelectorAll(".js-input"),0); // фикс для IE - slice помогает сделать массив из querySelectorAll
 
   collectionInput.forEach((i) => {

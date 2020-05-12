@@ -77,6 +77,29 @@
   }
 }
 
+.page-header__toggle:hover::after,
+.page-header__toggle:hover::before,
+.page-header__toggle:focus::after,
+.page-header__toggle:focus::before {
+  background-color: @white;
+}
+
+.page-header__toggle:active::after,
+.page-header__toggle:active::before {
+  background-color: @white;
+}
+
+.page-header--closed .page-header__toggle:hover::before,
+.page-header--closed .page-header__toggle:focus::before {
+  background-color: @grey-blue;
+  box-shadow: 0 8px 0 0 @grey-blue, 0 16px 0 0 @grey-blue;
+}
+
+.page-header--closed .page-header__toggle:active::before {
+  background-color: @grey-blue;
+  box-shadow: 0 8px 0 0 @grey-blue, 0 16px 0 0 @grey-blue;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     position: relative;

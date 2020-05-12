@@ -68,15 +68,13 @@
           <fieldset class="form-review__item form-review__item--feedback">
             <legend class="form-review__title form-review__title--feedback">Контактная информация:</legend>
             <div class="form-review__wrapper form-review__wrapper--feedback">
-            <div class="form-review__tel">
+            <div class="form-review__tel form-review__tel--icon">
               <label class="form-review__contact form-review__contact--feedback" for="tel"><span class="form-review__contact--del">Контактный</span> телефон*:</label>
               <input class="form-review__input form-review__input--feedback js-input" name="tel-tourist" id="tel" type="tel" placeholder="Введите телефон" required="" pattern="[0-9]{11}">
-              <span class="form-review__icon form-review__icon--tel"></span>
             </div>
-            <div class="form-review__email">
+            <div class="form-review__email form-review__email--icon">
               <label class="form-review__contact form-review__contact--feedback" for="email">Электронная почта*:</label>
               <input class="form-review__input form-review__input--feedback js-input" name="email-tourist" id="email" type="email" placeholder="Введите e-mail" required="">
-              <span class="form-review__icon form-review__icon--email"></span>
             </div>
             </div>
           </fieldset>
@@ -96,19 +94,19 @@
             <div class="form-review__wrapper form-review__wrapper--showplace">
               <label class="form-review__text form-review__text--showplace" for="bridge">Мост Дьявола
                 <input class="form-review__select form-review__select--showplace visually-hidden" name="devil-bridge" id="bridge" type="checkbox" checked="">
-                <span class="form-review__label--showplace"></span>
+                <span class="form-review__tick"></span>
               </label>
               <label class="form-review__text form-review__text--showplace" for="mountain">Гора-Колокол
                 <input class="form-review__select form-review__select--showplace visually-hidden" name="mountain" id="mountain" type="checkbox" checked="">
-                <span class="form-review__label--showplace"></span>
+                <span class="form-review__tick"></span>
               </label>
               <label class="form-review__text form-review__text--showplace" for="park">Слайд-парк
                 <input class="form-review__select form-review__select--showplace visually-hidden" name="slide-park" id="park" type="checkbox" checked="">
-                <span class="form-review__label--showplace"></span>
+                <span class="form-review__tick"></span>
               </label>
               <label class="form-review__text form-review__text--showplace" for="rocks">Красные скалы
                 <input class="form-review__select form-review__select--showplace visually-hidden" name="red-rocks" id="rocks" type="checkbox">
-                <span class="form-review__label--showplace"></span>
+                <span class="form-review__tick"></span>
               </label>
             </div>
           </fieldset>
@@ -120,7 +118,7 @@
 
           <div class="form-review__btn-wrapper">
             <button class="form-review__button button-form" type="submit">Отправить отзыв</button>
-            <span class="form-review__text--required">* — обязательные поля</span>
+            <span class="form-review__text-footnote">* — обязательные поля</span>
           </div>
         </form>
       </section>
@@ -133,7 +131,7 @@
           <li class="social__item social__item--twitter">
             <a class="social__link social__link--twitter" href="#">
               <span class="visually-hidden">Twitter</span>
-              <svg class="social__link--icon-twitter" xmlns="http://www.w3.org/2000/svg" width="18" height="15">
+              <svg class="social__icon social__icon--twitterr" xmlns="http://www.w3.org/2000/svg" width="18" height="15">
                 <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
@@ -141,7 +139,7 @@
           <li class="social__item social__item--facebook">
             <a class="social__link social__link--facebook" href="#">
               <span class="visually-hidden">Facebook</span>
-              <svg class="social__link--icon-facebook" width="9" height="18">
+              <svg class="social__icon social__icon--facebook" width="9" height="18">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
@@ -149,7 +147,7 @@
           <li class="social__item social__item--youtube">
             <a class="social__link social__link--youtube" href="#">
               <span class="visually-hidden">Youtube</span>
-              <svg class="social__link--icon-youtube" width="20" height="14">
+              <svg class="social__icon social__icon--youtube" width="20" height="14">
                 <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
@@ -160,7 +158,7 @@
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__link--icon-htmlacademy" width="27" height="34">
+          <svg class="copyright__icon copyright__icon--htmlacademy" width="27" height="34">
             <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
@@ -171,7 +169,7 @@
       <h2 class="visually-hidden">Сообщение об ошибке</h2>
       <b class="info-inner__title info-inner__title--error">Что-то пошло не&nbsp;так!</b>
       <p class="info-inner__text info-inner__text--error">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="form-review__btn-error button-form button-form__popup" type="button">ok</button>
+      <button class="form-review__btn-error button-form js-button" type="button">ok</button>
     </section>
 
     <section class="info-inner info-inner__message">
@@ -179,7 +177,7 @@
       <b class="info-inner__title info-inner__title--message">Ваш отзыв отправлен!</b>
       <p class="info-inner__text info-inner__text--message">Спасибо за&nbsp;ваше участие, ваш отзыв уже поступил к&nbsp;нам. в&nbsp;ближайшее время&nbsp; мы опубликуем его на&nbsp;сайте.</p>
       <div class="info-inner__wrapper-color">
-        <button class="form-review__btn-message button-form button-form__popup" type="button">Закрыть окно</button>
+        <button class="form-review__btn-message button-form js-button" type="button">Закрыть окно</button>
       </div>
     </section>
   </div>
