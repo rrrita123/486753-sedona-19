@@ -190,7 +190,7 @@
   cursor: pointer;
 }
 
-.form-review__label--showplace::before {
+.form-review__tick::before {
   content: "";
   position: absolute;
   display: block;
@@ -202,7 +202,7 @@
   background-color: @white-grey;
 }
 
-.form-review__select--showplace:checked + .form-review__label--showplace::after {
+.form-review__select--showplace:checked + .form-review__tick::after {
   content: url("../img/icon-tick.svg");
   position: absolute;
   display: block;
@@ -212,18 +212,18 @@
 
 .form-review__select:hover + label::before,
 .form-review__select:focus + label::before,
-.form-review__select--showplace:hover + .form-review__label--showplace::before,
-.form-review__select--showplace:focus + .form-review__label--showplace::before {
+.form-review__select--showplace:hover + .form-review__tick::before,
+.form-review__select--showplace:focus + .form-review__tick::before {
   background-color: @grey-border;
 }
 
 .form-review__select:active + label::before,
-.form-review__select--showplace:active + .form-review__label--showplace::before {
+.form-review__select--showplace:active + .form-review__tick::before {
   background-color: #d5d5d5;
 }
 
 .form-review__select:active + label::after,
-.form-review__select--showplace:active + .form-review__label--showplace::after {
+.form-review__select--showplace:active + .form-review__tick::after {
   opacity: 0.3;
 }
 
@@ -263,7 +263,7 @@
   height: 160px;
 }
 
-.form-review__text--required {
+.form-review__text-footnote {
   display: none;
 }
 
@@ -280,6 +280,8 @@
   margin-top: 36px;
   padding-top: 17px;
   padding-bottom: 15px;
+
+  font-size: 21px;
 }
 
 .form-review__tel,
@@ -288,36 +290,40 @@
   margin-bottom: 12px;
 }
 
-.form-review__icon--tel::after,
-.form-review__icon--email::after {
+.form-review__tel--icon::after,
+.form-review__email--icon::after {
   position: absolute;
   height: 58px;
+  width: 58px;
   right: 0;
   bottom: 0;
   box-sizing: border-box;
   background-color: #e6e6e6;
 }
 
-.form-review__icon--tel::after {
+.form-review__tel--icon::after {
   content: url("../img/icon-phone.svg");
   padding: 20px 20px 14px 20px;
 }
 
-.form-review__icon--email::after {
+.form-review__email--icon::after {
   content: url("../img/icon-mail.svg");
   padding: 22px 21px 14px 21px;
 }
 
-.form-review__btn-error {
-  width: 56%;
+.form-review__btn-error,
+.form-review__btn-message {
   padding-top: 16px;
   padding-bottom: 16px;
+  font-size: 18px;
+}
+
+.form-review__btn-error {
+  width: 56%;
 }
 
 .form-review__btn-message {
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .form-review__input--error {
@@ -504,7 +510,7 @@
     margin-left: 0;
   }
 
-  .form-review__text--required {
+  .form-review__text-footnote {
     display: block;
     line-height: 26px;
     color: @black-grey;
@@ -535,6 +541,11 @@
 
   .form-review__btn-error {
     width: 68%;
+  }
+
+  .form-review__btn-error,
+  .form-review__btn-message {
+    font-size: 21px;
   }
 }
 
