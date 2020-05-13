@@ -81,23 +81,25 @@
 .page-header__toggle:hover::before,
 .page-header__toggle:focus::after,
 .page-header__toggle:focus::before {
-  background-color: @white;
+  opacity: 0.6;
 }
 
 .page-header__toggle:active::after,
 .page-header__toggle:active::before {
-  background-color: @white;
+  opacity: 0.3;
 }
 
 .page-header--closed .page-header__toggle:hover::before,
 .page-header--closed .page-header__toggle:focus::before {
   background-color: @grey-blue;
   box-shadow: 0 8px 0 0 @grey-blue, 0 16px 0 0 @grey-blue;
+  opacity: 0.6;
 }
 
 .page-header--closed .page-header__toggle:active::before {
   background-color: @grey-blue;
   box-shadow: 0 8px 0 0 @grey-blue, 0 16px 0 0 @grey-blue;
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

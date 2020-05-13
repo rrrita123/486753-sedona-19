@@ -5,6 +5,8 @@
 }
 
 .info__blue {
+  display: flex;
+  flex-direction: column;
   background-color: @grey-blue;
   color: @white;
   padding-left: 28px;
@@ -23,6 +25,8 @@
 }
 
 .info__grey {
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding-top: 26px;
   padding-bottom: 29px;
@@ -54,19 +58,19 @@
   .title();
 }
 
-.info__number {
+.info__blue::before,
+.info__grey::before {
+  counter-increment: number;
+  content: "– №" counter(number) " –";
   margin: 0;
   padding-bottom: 15px;
   padding-top: 9px;
-
-  &::before {
-    counter-increment: number;
-    content: "– №" counter(number) " –";
-  }
+  order: 1;
 }
 
 .info__text {
   margin: 0;
+  order: 2;
 }
 
 @media (max-width: 767px) {
@@ -111,8 +115,8 @@
   }
 
   .info__grey {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     padding-right: 49px;
     padding-left: 49px;
     padding-top: 44px;
